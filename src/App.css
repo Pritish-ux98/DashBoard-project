@@ -70,16 +70,16 @@
   margin-right: auto;
 }
 .task-input-row {
-  display: flex !important;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   gap: 12px;                  /* Adds uniform spacing between the input, select, and button */
   background-color: #111827;  /* Dark card tile background */
   border: 1px solid #1e293b;
   border-radius: 10px;
   padding: 12px;
   width: 100%;
-  width: 100%;
-  max-width: 100%;
+  max-width: 768px;
   height:auto;
   box-sizing: border-box;
   margin-bottom: 20px;        /* Pushes the task cards down cleanly */
@@ -115,6 +115,7 @@
   border-radius: 6px;
   padding: 12px 14px;
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
   font-weight: bold;
   font-size: 1rem;
@@ -136,6 +137,8 @@
   border-radius: 6px;
   padding: 12px 14px;
   width:100%;
+  max-width: 100%;
+  min-width: 0; 
   box-sizing: border-box;
   color: #ffffff;
   font-size: 0.95rem;
