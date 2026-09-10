@@ -31,7 +31,7 @@ export function MainContent({Task,onAddTask,onToggleTask,isLevelUp}){
                     <option value="S-Rank">S-Rank</option>
                 </select>
                 <button onClick={HandleAddClick} className="quest-button">
-                    Add Quest
+                    Add
                 </button>
             </div>
             <div className="task-input-container">
