@@ -1,0 +1,285 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 1000px;
+  margin:0 auto;      
+  padding: 10px;         
+  box-sizing: border-box;
+  color:#f8fafc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header{
+  text-align: center;
+  font-weight: bolder;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  border: 1px solid #38bdf8; 
+  width:95%;
+}
+.bar-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:15px;
+  width: 100%;
+  max-width:800px;
+}
+.bar{
+  height: 20px;
+  border: 1px solid ;
+  border-style: none;
+  border-radius: 40px;
+  transition: width 0.4s ease, background-color 0.4s ease; 
+  background-color: #334155;
+}
+
+.main-content{
+  margin-top: 20px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 95%;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+}
+.footer{
+  margin-top: 30px;
+  background-color: #090d16;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 0 20px; /* Replaces naked height with clean inside padding */
+  box-sizing: border-box;
+  width: 95%;
+  height:70px;
+  display: flex;
+  align-items: center; /* Center-aligns the counters vertically */
+  justify-content: space-between;
+  font-size: 1rem; /* Slightly larger, more readable font size */
+  font-weight: 600;
+}
+
+.footer,.main-content,.bar-row,.header{
+  margin-left: auto;
+  margin-right: auto;
+}
+.task-input-row {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;                  /* Adds uniform spacing between the input, select, and button */
+  background-color: #111827;  /* Dark card tile background */
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;        /* Pushes the task cards down cleanly */
+}
+.text{
+  flex: 1; /* 🚀 This pushes the input field to stretch across the empty space! */
+  background-color: #1e293b;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  padding: 10px 14px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.rank-picker{
+  background-color: #1e293b;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  padding: 10px 14px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  outline: none;
+}
+.rank-picker:focus {
+  border-color: #38bdf8;
+}
+.quest-button{
+  background-color: #38bdf8; /* Vibrant light blue */
+  color: #0f172a; /* Dark text for high contrast */
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), background-color 0.2s;
+}
+.quest-button:hover {
+  background-color: #7dd3fc; /* Lighter blue on hover */
+  transform: scale(1.05);
+}
+
+.quest-button:active {
+  transform: scale(0.95);
+}
+.input-task{
+  flex: 1; /* Makes the text input expand to fill space */
+  background-color: #1e293b;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  padding: 10px 14px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.input-task:focus {
+  border-color: #38bdf8; /* Glowing blue border focus */
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+}
+.claim-button{
+  background: linear-gradient(90deg, #ec4899, #8b5cf6); /* Epic pink-to-purple gradient */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), background-color 0.2s;
+}
+.claim-button:hover {
+  opacity: 0.9;
+  transform: scale(1.05); /* 🚀 Makes the button 5% larger on hover (YouTube style) */
+
+}
+
+.claim-button:active {
+  transform: scale(0.95); /* 🚀 Shrinks slightly when clicked for a physical button press feel */
+
+}
+/* Clean parent holder wrapper - no borders, no backgrounds */
+.task-list-container {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  max-height: 350px !important;               /* Tells the list to take up all remaining vertical space inside the box */
+  overflow-y: auto;                           /* Instantly forces scrollbar when tasks fill the space */
+  padding-right: 5px;                         /* Keeps scrollbar separated from checkboxes */
+}
+.task-list-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.task-list-container::-webkit-scrollbar-track {
+  background: #0f172a;
+  border-radius: 4px;
+}
+
+.task-list-container::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+.task-list-container::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;     /* Turns blue when hovered */
+}
+
+/* Individual list item card entries */
+.task-input-display {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #111827; /* Dark tile panels */
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 14px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.task-input-display:hover {
+  transform: translateX(4px);
+  border-color: #38bdf8; /* Soft blue glowing layout focus highlight */
+}
+
+.task-index{
+  color: #64748b; /* Muted slate grey for the number indicator */
+  font-weight: bold;
+  margin-right: 8px;
+}
+.task{
+  flex: 1; /* Pushes the text content to occupy maximum center space */
+  color: #e2e8f0;
+  font-size: 1rem
+
+}
+.task-rank-badge{
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-right: 15px;
+  background-color: rgba(56, 189, 248, 0.15); /* Universal sleek semi-transparent fill */
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+
+}
+.input-checkbox{
+  appearance: none; /* Disables the native default look */
+  width: 18px;
+  height: 18px;
+  border: 2px solid #475569;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, border-color 0.2s;
+
+}
+.input-checkbox:checked {
+  background-color: #10b981; /* Emerald green check box when finished */
+  border-color: #10b981;
+}
+
+.input-checkbox:checked::after {
+  content: '✓';
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+/* Styling for completed task text strings */
+.task.completed {
+  text-decoration: line-through;
+  color: #64748b; /* Dims text down to a muted slate grey */
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+/* Optional: Dim the entire card slightly when completed */
+.task-input-display:has(.input-checkbox:checked) {
+  opacity: 0.7;
+  border-color: #10b981; /* Changes card border to green when checked! */
+}
+.level-up-banner{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Gives breathing space between the Level Up title and the description text */
+.level-up-banner h2 {
+  margin-bottom: 8px !important;
+  font-weight: 900;
+}
+
+.level-up-banner p {
+  color: #94a3b8; /* Changes description text to a slightly softer grey for better premium contrast */
+}
