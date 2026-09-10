@@ -1,8 +1,10 @@
 .dashboard-container {
   display: flex;
   flex-direction: column;
-  height: auto;
   max-width: 1000px;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
   margin:0 auto;      
   padding: 10px;         
   box-sizing: border-box;
@@ -44,7 +46,7 @@
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
-  height: 768px;
+  height: 750px;
   display: flex;
   flex-direction: column;
 }
@@ -71,15 +73,15 @@
 }
 .task-input-row {
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  flex-direction: row;
+  align-items: center;
   gap: 12px;                  /* Adds uniform spacing between the input, select, and button */
   background-color: #111827;  /* Dark card tile background */
   border: 1px solid #1e293b;
   border-radius: 10px;
   padding: 12px;
   width: 100%;
-  max-width: 768px;
+  max-width: auto;
   height:auto;
   box-sizing: border-box;
   margin-bottom: 20px;        /* Pushes the task cards down cleanly */
@@ -114,8 +116,6 @@
   border: none;
   border-radius: 6px;
   padding: 12px 14px;
-  width: 100%;
-  max-width: 100%;
   box-sizing: border-box;
   font-weight: bold;
   font-size: 1rem;
