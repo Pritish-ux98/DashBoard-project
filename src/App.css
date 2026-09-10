@@ -101,6 +101,8 @@
   background-color: #1e293b;
   border: 1px solid #475569;
   border-radius: 6px;
+  width:100%;
+  box-sizing: border-box;
   padding: 10px 14px;
   color: #ffffff;
   font-size: 0.95rem;
@@ -115,6 +117,8 @@
   color: #0f172a; /* Dark text for high contrast */
   border: none;
   border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
   padding: 12px 14px;
   box-sizing: border-box;
   font-weight: bold;
