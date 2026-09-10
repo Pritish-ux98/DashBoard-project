@@ -101,7 +101,6 @@
   background-color: #1e293b;
   border: 1px solid #475569;
   border-radius: 6px;
-  flex-shrink: 0;
   box-sizing: border-box;
   padding: 10px 14px;
   color: #ffffff;
@@ -117,10 +116,10 @@
   color: #0f172a; /* Dark text for high contrast */
   border: none;
   border-radius: 6px;
-  flex-shrink: 0;
   box-sizing: border-box;
   padding: 12px 14px;
   box-sizing: border-box;
+  width: auto;
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
@@ -145,7 +144,7 @@
   min-width: 0; 
   box-sizing: border-box;
   color: #ffffff;
-  font-size: 0.95rem;
+  font-size: 1rem;
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
@@ -159,7 +158,6 @@
   border: none;
   border-radius: 6px;
   padding: 12px 14px;
-  width:100%;
   box-sizing: border-box;
   font-weight: bold;
   text-transform: uppercase;
